@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+        link(rel="stylesheet", href="/style.css")
+    body
+        header
+            a(href="/" id="homeBtn")
+                img(src="/assets/home.png", alt="Home icon")
+        main
+            section(id="film")
+                h1(id="title") #{title}
+                img(src=poster, alt=title + ' poster')
+                h2 Director: #{director}
+                h2 Release year: #{year}
+                h2 Genre: #{genre}
+                h2 #{plot}
+                a(href='https://www.imdb.com/title/' + imdbID target="_blank")
+                    img(src="/assets/imdb.png", alt="IMDb logo")
+            section(id="search")
+                fieldset 
+                    h1 Search another film.
+                    form(action="/film" method='post' id="form")
+                        input(type="text" name="title" id="title" placeholder="Enter a film title" required)
+                        input(type="submit" id="submit" value="Search")
+        script(src="/script.js") 

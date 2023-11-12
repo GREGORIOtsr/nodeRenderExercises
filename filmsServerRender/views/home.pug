@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+        link(rel="stylesheet", href="/style.css")
+    body
+        header 
+        main
+            section(id="home") 
+                h1 Welcome 
+                p Search any film from IMDb by its title!
+                fieldset 
+                    form(action="/film" method='post' id="form")
+                        input(type="text" name="title" id="title" placeholder="Enter a film title" required)
+                        input(type="submit" id="submit" value="Search")

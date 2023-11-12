@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+   include head.pug
+      title Location
+   body
+      header
+         include nav.pug
+
+      main
+         a(href="https://www.thebridge.tech/" target="_blank")
+            img(src="/assets/thebridge.png", alt="The Bridge Logo" id="logo")
+         h1 The Bridge's Madrid Campus!
+         a(href=location target="_blank")
+            img(src="/assets/googlemaps.png", alt="Google Maps Icon")
